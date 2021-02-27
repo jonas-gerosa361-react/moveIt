@@ -56,7 +56,33 @@
     font-weight: 600;
 }
 
-.startCountdownButton:hover {
+.startCountdownButton:not(:disabled):hover {
     background: var(--blue-dark);
     transition: background-color 0.2s;
+}
+
+.countdownButtonActive {
+    background: var(--white);
+    color: var(--title);
+}
+
+.countdownButtonActive:not(:disabled):hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+.countdownButtonActive {
+    background: var(--white);
+    color: var(--title);
+}
+
+.countdownButtonActive:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+.startCountdownButton:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
 }
