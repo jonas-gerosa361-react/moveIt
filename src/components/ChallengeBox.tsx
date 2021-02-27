@@ -1,7 +1,7 @@
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-    const hasChallenge = true;
+    const hasChallenge = false;
 
     return(
         <div className={styles.challengeBoxContainer}>
@@ -13,7 +13,23 @@ export function ChallengeBox() {
                     <main>
                         <img src="icons/body.svg" alt=""/>
                         <strong>Novo Desafio</strong>
+                        <p>Levante e faça uma caminhada de 3min</p>
                     </main>
+                    <footer>
+                        <button
+                            type="button"
+                            className={styles.challengeFailedButton}
+                            >
+                                Falhei
+                        </button>
+                        <button
+                            type="button"
+                            className={styles.challengeSucceededButton}
+                            >
+                                Completei
+                        </button>
+                    </footer>
+                    
                 </div>
             ) : (
                 <div className={styles.challengeNotActive}>
